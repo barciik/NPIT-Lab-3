@@ -16,3 +16,8 @@ if [[ "$1" == "--logs" ]]; then
   	done
 
 fi
+
+if [[ "$1" == "--help" ]]; then
+	echo "--date"
+	echo "--logs"
+fi
