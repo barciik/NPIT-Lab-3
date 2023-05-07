@@ -3,7 +3,11 @@ if [[ "$1" == "--date" ]]; then
 fi
 
 if [[ "$1" == "--logs" ]]; then
-	for ((i=1; i<=100; i++)); do
+	num=100
+	if [[ -n "$2" ]]; then
+		num=$2
+	fi
+	for ((i=1; i<=$num; i++)); do
     		filename="log${i}.txt"
    		echo "Nazwa pliku: ${filename}" > "${filename}"
     		echo "Nazwa skryptu: ${0}" >> "${filename}"
